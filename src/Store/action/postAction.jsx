@@ -1,4 +1,4 @@
-import { LOAD_POSTS, TOOGLE_BOOKED, REMOVE_POST, ADD_POST } from '../types'
+import { LOAD_POSTS, TOOGLE_BOOKED, REMOVE_POST, ADD_POST, REMAKE_POST } from '../types'
 
 export const loadPosts = () => {
     return {
@@ -27,5 +27,12 @@ export const addPost = post => {
   return {
     type: ADD_POST,
     payload: post
+  }
+}
+
+export const remakePost = text => {
+  return {
+    type: REMAKE_POST,
+    payload: text
   }
 }

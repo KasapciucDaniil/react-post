@@ -1,4 +1,4 @@
-import { LOAD_POSTS, REMOVE_POST, TOOGLE_BOOKED, ADD_POST } from "../types"
+import { LOAD_POSTS, REMOVE_POST, TOOGLE_BOOKED, ADD_POST, REMAKE_POST } from "../types"
 
 const initialState = {
    allPosts: [],
@@ -35,6 +35,19 @@ export const PostReducer = ( state = initialState, action ) => {
         ...state,
         allPosts: [{ ...action.payload },...state.allPosts]
       }
+    case REMAKE_POST : {
+      return {
+        ...state, allPosts: state.allPosts.map(post => {
+          if (post.id === action.id) {
+            post.title = action.title
+          }
+          return {
+            ...post,
+            ...action.post
+          }
+        })
+     }   
+    }  
 
      default: return state
    }

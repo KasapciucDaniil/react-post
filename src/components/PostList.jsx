@@ -8,7 +8,7 @@ export const PostList = ({ data, onOpen }) => {
   if (!data.length) {
     return <View style={styles.container}>
       <Text style={styles.noItems}>Постов пока нет!</Text>
-      <Image style={styles.image} source={require('../../assets/post.jpg')} />
+      <Image style={styles.image} source={require('../../assets/img.jpg')} />
     </View>
   }
 
@@ -17,8 +17,7 @@ export const PostList = ({ data, onOpen }) => {
        <FlatList 
          data={data} 
          keyExtractor={post => post.id.toString()} 
-         renderItem={({item}) => <Post post={item} onOpen={onOpen} 
-       />
+         renderItem={({item}) => <Post post={item} onOpen={onOpen} />
       } 
      />
     </View>
@@ -33,7 +32,8 @@ const styles = StyleSheet.create({
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
-      padding: 10
+      padding: 10,
+      // backgroundColor: '#30379f'
     },
     noItems: {
       textAlign: 'center',

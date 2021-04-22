@@ -7,24 +7,24 @@ import { PostList } from '../components/PostList'
 import { loadPosts } from '../Store/action/postAction'
 
 export const MainScreen = ({ navigation }) => {
-    const openPostHnalder = post => {
-       navigation.navigate('Post', {
-           postId: post.id,
-           booked: post.booked
-       })
-    }
+  const openPostHnalder = post => {
+      navigation.navigate('Post', {
+          postId: post.id,
+          booked: post.booked
+      })
+  }
 
-    const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
-    useEffect(() => {
-      dispatch(loadPosts())
-    }, [dispatch])
+  useEffect(() => {
+    dispatch(loadPosts())
+  }, [dispatch])
 
-    const allPosts = useSelector(state => state.post.allPosts)
-    
-    return (
-      <PostList data={allPosts} onOpen={openPostHnalder} />
-    )
+  const allPosts = useSelector(state => state.post.allPosts)
+  
+  return (
+    <PostList data={allPosts} onOpen={openPostHnalder} />
+  )
 }
 
 MainScreen.navigationOptions = ({ navigation }) => ({

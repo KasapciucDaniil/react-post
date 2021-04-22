@@ -7,9 +7,12 @@ export const Post = ({ post, onOpen }) => {
         <View style={styles.post}>
             <ImageBackground style={styles.image} source={{uri: post.img}}>
             <View style={styles.textWrap}>
-                <Text style={styles.title}>
+              <Text style={styles.title}>
+                {post.text}
+              </Text>
+              <Text style={styles.title}>
                 {new Date(post.date).toLocaleDateString()}
-                </Text>
+              </Text>
             </View>
             </ImageBackground>
         </View>
@@ -31,7 +34,9 @@ const styles = StyleSheet.create({
       backgroundColor: 'rgba(0, 0, 0,0.5)',
       paddingVertical: 5,
       alignItems: 'center',
-      width: '100%'
+      width: '100%',
+      justifyContent: 'space-around',
+      flexDirection: 'row'
     },
     title: {
       color: 'white'

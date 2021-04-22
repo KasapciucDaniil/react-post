@@ -49,6 +49,15 @@ const bottomTabsConfig = {
         )
       }
     },
+    Create: {
+      screen: CreateScreen,
+      navigationOptions: {
+        tabBarLabel: 'Посты',
+        tabBarIcon: info => (
+          <Ionicons name="add-circle" size={25} color={info.tintColor} />
+        ) 
+      }
+    },
     Booked: {
       screen: BookedNavigator,
       navigationOptions: {

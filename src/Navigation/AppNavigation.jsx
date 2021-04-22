@@ -5,7 +5,7 @@ import { createDrawerNavigator } from 'react-navigation-drawer'
 import { createStackNavigator } from 'react-navigation-stack'
 import { createBottomTabNavigator } from 'react-navigation-tabs'
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs'
-import { Ionicons } from '@expo/vector-icons'
+import { Ionicons, AntDesign } from '@expo/vector-icons'
 
 import { MainScreen } from '../screens/MainScreen'
 import { PostScreen } from '../screens/PostScreen'
@@ -54,7 +54,7 @@ const bottomTabsConfig = {
       navigationOptions: {
         tabBarLabel: 'Посты',
         tabBarIcon: info => (
-          <Ionicons name="add-circle" size={25} color={info.tintColor} />
+          <AntDesign name="addfolder" size={25} color={info.tintColor} />
         ) 
       }
     },

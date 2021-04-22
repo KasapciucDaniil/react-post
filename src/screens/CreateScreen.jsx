@@ -89,7 +89,9 @@ const styles = StyleSheet.create({
   },
   textarea: {
     padding: 10,
-    marginBottom: 10
+    marginBottom: 10,
+    borderBottomColor: 'black',
+    borderBottomWidth: 1
   },
   image: {
     width: '100%',

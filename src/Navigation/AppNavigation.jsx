@@ -40,6 +40,15 @@ const BookedNavigator = createStackNavigator(
 )
 
 const bottomTabsConfig = {
+  Home: {
+    screen: AboutScreen,
+    navigationOptions: {
+      tabBarLabel: 'Главная',
+      tabBarIcon: info => ( 
+        <Ionicons name="home" size={25} color={info.tintColor} /> 
+      )
+    }
+  },
     Post: {
       screen: PostNavigator,
       navigationOptions: {
@@ -52,7 +61,7 @@ const bottomTabsConfig = {
     Create: {
       screen: CreateScreen,
       navigationOptions: {
-        tabBarLabel: 'Посты',
+        tabBarLabel: 'Добавить',
         tabBarIcon: info => (
           <AntDesign name="addfolder" size={25} color={info.tintColor} />
         ) 

@@ -12,7 +12,7 @@ export const AboutScreen = ({ navigation }) => {
           <Text>Это приложение с личными заметками.</Text>
           <Text>Версия приложения<Text> 1.0.0</Text></Text>
           <View style={styles.button} >
-            <AntDesign.Button 
+            {/* <AntDesign.Button 
               name="addfile" 
               size={23} 
               backgroundColor={THEME.MAIN_COLOR} 
@@ -20,7 +20,7 @@ export const AboutScreen = ({ navigation }) => {
               onPress={() => navigation.push('Create')}
             >
               Create Post
-            </AntDesign.Button>
+            </AntDesign.Button> */}
           </View>
         </View>
     )
